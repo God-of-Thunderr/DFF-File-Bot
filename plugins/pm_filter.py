@@ -404,11 +404,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         except ChatAdminRequired:
             logger.error("Make sure Bot is admin in Forcesub channel")
             return
-        buttons = [
+        btn = [
             [
-                InlineKeyboardButton('join Channel', url=invite_link.invite_link
+                InlineKeyboardButton(
+                    "🤖 Join Updates Channel", url=invite_link.invite_link
+                )
             ]
-            ]
+        ]
         await query.answer()
         await client.send_cached_media(
             chat_id=query.from_user.id,
