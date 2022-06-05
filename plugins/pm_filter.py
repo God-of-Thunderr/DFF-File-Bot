@@ -775,10 +775,11 @@ async def advantage_spell_chok(msg):
             callback_data=f"spolling#{user}#{k}",
         )
     ] for k, movie in enumerate(movielist)]
-    btn.append([InlineKeyboardButton(text="🗑 𝖢𝗅𝗈𝗌𝖾", callback_data=f'spolling#{user}#close_spellcheck'), InlineKeyboardButton('🔍 𝖦𝗈𝗈𝗀𝗅𝖾', url='https://Google.com')])
-    f = await msg.reply("<b>I couldn't find anything related to that\nDid you mean any one of these?</b>", reply_markup=InlineKeyboardMarkup(btn))
+    btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
+    s = await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?",
+                    reply_markup=InlineKeyboardMarkup(btn))
     await asyncio.sleep(5)
-    await f.delete()
+    await s.delete()
     return
 
 
