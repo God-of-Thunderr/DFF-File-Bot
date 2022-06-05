@@ -29,6 +29,7 @@ logger.setLevel(logging.ERROR)
 BUTTONS = {}
 SPELL_CHECK = {}
 SECOND_BOT = "BetterAutoFilterBot"
+PRIVATE_CHANNEL = "-1001737835063"
 
 @Client.on_message(filters.group & filters.text & ~filters.edited & filters.incoming)
 async def give_filter(client, message):
