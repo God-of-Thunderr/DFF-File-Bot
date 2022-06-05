@@ -398,9 +398,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f_caption = f_caption
         if f_caption is None:
             f_caption = f"{title}"
+        try:    
+            invite_link = await client.create_chat_invite_link(int(PRIVATE_CHANNEL))
+        except ChatAdminRequired:
+            logger.error("Make sure Bot is admin in Forcesub channel")
+            return
         buttons = [
             [
-                InlineKeyboardButton('join Channel', url=f'https://t.me/+y53tWFUw6Q43NzE9')
+                InlineKeyboardButton('join Channel', url=invite_link.invite_link
             ]
             ]
         await query.answer()
