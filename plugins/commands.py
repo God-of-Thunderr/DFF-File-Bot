@@ -18,8 +18,8 @@ logger = logging.getLogger(__name__)
 
 BATCH_FILES = {}
 
-@Client.on_message(filters.command("start") & filters.incoming & ~filters.edited)
-async def start(client, message):
+@Client.on_message(filters.command("cvstart") & filters.incoming & ~filters.edited)
+async def cvstart(client, message):
     if message.chat.type in ['group', 'supergroup']:
         buttons = [
             [
