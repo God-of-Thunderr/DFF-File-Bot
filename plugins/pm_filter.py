@@ -28,7 +28,7 @@ logger.setLevel(logging.ERROR)
 
 BUTTONS = {}
 SPELL_CHECK = {}
-
+SECOND_BOT = "DFFFileBoT"
 
 @Client.on_message(filters.group & filters.text & ~filters.edited & filters.incoming)
 async def give_filter(client, message):
@@ -64,7 +64,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", url=f'https://t.me/{2NDBOT}?start={file.file_id}'
+                    text=f"[{get_size(file.file_size)}] {file.file_name}", url=f'https://t.me/{SECOND_BOT}?start={file.file_id}'
                 ),
             ]
             for file in files
@@ -73,7 +73,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"{file.file_name}", url=f'https://t.me/{2NDBOT}?start={file.file_id}'
+                    text=f"{file.file_name}", url=f'https://t.me/{SECOND_BOT}?start={file.file_id}'
                 ),
                 InlineKeyboardButton(
                     text=f"{get_size(file.file_size)}",
