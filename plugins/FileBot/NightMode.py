@@ -22,7 +22,6 @@ nmbot = Client(
         api_hash="eb06d4abfb49dc3eeb1aeb98ae0f581e"
         )
 
-
 async def group_close():
     try:
         await nmbot.send_message(
@@ -63,8 +62,8 @@ async def group_open():
                 )
 
 
-@nmbot.on_message(filters.command("start"))
-async def start(client, message):
+@nmbot.on_message(filters.command("privatestrt"))
+async def privatestrt(client, message):
     await message.reply(
             "Heya, I am a NightMode Bot\n**(c) [Reeshuxd](https://github.com/Reeshuxd)**",
             reply_markup=InlineKeyboardMarkup([
