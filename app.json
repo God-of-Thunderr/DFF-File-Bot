@@ -20,10 +20,12 @@
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
+            "value": "5196875378:AAHEy-hyd714A6v_IzEqMiS2VSbzwYxGxBk",
             "required": true
         },
         "API_ID": {
             "description": "Get this value from https://my.telegram.org",
+            "value": "7961171",
             "required": true
         },
         "API_HASH": {
@@ -32,10 +34,12 @@
         },
         "CHANNELS": {
             "description": "Username or ID of channel or group. Separate multiple IDs by space.",
+            "value": "-1001543113275",
             "required": false
         },
         "ADMINS": {
             "description": "Username or ID of Admin. Separate multiple Admins by space.",
+            "value": "1903280447",
             "required": true
         },
         "PICS": {
@@ -44,6 +48,7 @@
         },
         "LOG_CHANNEL": {
             "description": "Bot Logs,Give a channel id with -100xxxxxxx",
+            "value": "-1001737835063",
             "required": true
         },
         "AUTH_USERS": {
