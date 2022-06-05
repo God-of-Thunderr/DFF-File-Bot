@@ -703,7 +703,7 @@ async def auto_filter(client, msg, spoll=False):
                 )
             ]
         ]
-    )]      
+    )      
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
     if imdb:
