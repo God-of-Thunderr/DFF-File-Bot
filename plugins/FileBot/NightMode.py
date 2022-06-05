@@ -53,9 +53,9 @@ async def group_open():
 @Client.on_message(filters.command("privatestrt"))
 async def privatestrt(client, message):
     await message.reply(
-            "Heya, I am a NightMode Bot\n**(c) [Reeshuxd](https://github.com/Reeshuxd)**",
+            "**Note:** Night Mode chats get Automatically closed at 12pm(IST)and Automatically openned at 6am(IST) To Prevent Night Spams.\n**(c) [subhan-1](https://github.com/subhan-1)**",
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton(" My Source Code", url="github.com/Reeshuxd/NightModeBot")]
+                [InlineKeyboardButton("Join My Group", url="t.me/Hollywood_0980")]
                 ]
             )
         )
