@@ -4,8 +4,11 @@ from pyrogram import Client, filters
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ChatPermissions
 from info import CHAT_ID, TIMEZONE
-logging.basicConfig(level=logging.INFO)
 
+import logging
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.ERROR)
 
 async def group_close():
     try:
