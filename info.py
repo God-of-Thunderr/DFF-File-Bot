@@ -24,6 +24,7 @@ PICS = (environ.get('PICS', 'https://telegra.ph/file/7e56d907542396289fee4.jpg h
 #nightmode
 TIMEZONE = "Asia/Kolkata"
 CHAT_ID = "-1001779657158"
+PRIVATE_CHANNEL = environ.get('PRIVATE_CHANNEL', "https://t.me/+lw3xnR7Frj1iYTA1")
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
