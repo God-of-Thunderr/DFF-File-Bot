@@ -17,8 +17,7 @@ import base64
 logger = logging.getLogger(__name__)
 
 BATCH_FILES = {}
-STICKER = "CAACAgUAAxkBAAEEuEBifrfX8TUKLE2fmisJXnUK5NeSFAACxAUAAuJKSFZedHv2IfYHFyQE"
-STARTS = "join @Hollywood_0980"
+STICKER = "CAACAgUAAxkBAAEE7AJinaTQIlVcnwmqK53UuzHZjDfq2gACqgQAAoKm8FQsM7CPCRnY_SQE"
 
 @Client.on_message(filters.command("start") & filters.incoming & ~filters.edited)
 async def start(client, message):
