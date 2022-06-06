@@ -1,18 +1,18 @@
 import os
-import telegraminfo
+import tginfo
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 @Client.on_message((filters.private | filters.group) & filters.command(["info", "information"]))
 async def info(bot, update):
     if (not update.reply_to_message) and ((not update.forward_from) or (not update.forward_from_chat)):
-        info = telegraminfo.user(update.from_user)
+        info = tginfo.user(update.from_user)
     elif update.reply_to_message and update.reply_to_message.forward_from:
-        info = telegraminfo.user(update.reply_to_message.forward_from)
+        info = tginfo.user(update.reply_to_message.forward_from)
     elif update.reply_to_message and update.reply_to_message.forward_from_chat:
-        info = telegraminfo.chat(update.reply_to_message.forward_from_chat)
+        info = tginfo.chat(update.reply_to_message.forward_from_chat)
     elif (update.reply_to_message and update.reply_to_message.from_user) and (not update.forward_from or not update.forward_from_chat):
-        info = telegraminfo.user(update.reply_to_message.from_user)
+        info = tginfo.user(update.reply_to_message.from_user)
     else:
         return
     try:
