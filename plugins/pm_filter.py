@@ -691,7 +691,7 @@ async def auto_filter(client, msg, spoll=False):
         logger.error("Make sure Bot is admin in Forcesub channel")
         return
     btn.insert(0, [
-        InlineKeyboardButton("⭕️ Join Our Channel ⭕️",url="https://t.me/imdbprobots/4")
+        InlineKeyboardButton("⭕️ Join Our Channel ⭕️", url=invite_link.invite_link
     ])     
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
