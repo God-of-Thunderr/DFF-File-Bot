@@ -17,9 +17,9 @@ import base64
 logger = logging.getLogger(__name__)
 
 BATCH_FILES = {}
-STICKER = "CAACAgQAAxkBAAEE7AtinarGEU0QgVJ2HjhETXa7Dt2okgAC0gwAAgfq6VDLfhlDtTvxUSQE"
+STICKER = "CAACAgUAAxkBAAEE7AJinaTQIlVcnwmqK53UuzHZjDfq2gACqgQAAoKm8FQsM7CPCRnY_SQE"
 
-Client.on_message(filters.command("start") & filters.incoming & ~filters.edited)
+@Client.on_message(filters.command("start") & filters.incoming & ~filters.edited)
 async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
         buttons = [
