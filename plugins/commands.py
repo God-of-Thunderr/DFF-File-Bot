@@ -17,7 +17,7 @@ import base64
 logger = logging.getLogger(__name__)
 
 BATCH_FILES = {}
-STICKER = "CAACAgUAAxkBAAEE7AJinaTQIlVcnwmqK53UuzHZjDfq2gACqgQAAoKm8FQsM7CPCRnY_SQE"
+STICKER = "CAACAgQAAxkBAAEE7AtinarGEU0QgVJ2HjhETXa7Dt2okgAC0gwAAgfq6VDLfhlDtTvxUSQE"
 
 Client.on_message(filters.command("start") & filters.incoming & ~filters.edited)
 async def start(client, message):
