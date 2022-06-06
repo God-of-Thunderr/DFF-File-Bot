@@ -3,6 +3,10 @@ from plugins.filebot import tginfo
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
+BUTTONS = InlineKeyboardMarkup(
+    [[InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/Subhan011')]]
+)
+
 @Client.on_message((filters.private | filters.group) & filters.command(["info", "information"]))
 async def info(bot, update):
     if (not update.reply_to_message) and ((not update.forward_from) or (not update.forward_from_chat)):
