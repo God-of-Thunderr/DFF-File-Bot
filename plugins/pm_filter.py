@@ -684,13 +684,13 @@ async def auto_filter(client, msg, spoll=False):
         btn.append(
             [InlineKeyboardButton(text="🗓 1/1", callback_data="pages")]
         )
-
-        
+    else:  
         invite_link = await client.create_chat_invite_link(int(PRIVATE_CHANNEL))    
         return
     btn.insert(0, 
         InlineKeyboardButton("⭕️ Join Our Channel ⭕️", url=invite_link.invite_link
     )     
+        return
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
     if imdb:
