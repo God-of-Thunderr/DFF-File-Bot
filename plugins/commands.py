@@ -22,7 +22,9 @@ STICKER = "CAACAgUAAxkBAAEE7AJinaTQIlVcnwmqK53UuzHZjDfq2gACqgQAAoKm8FQsM7CPCRnY_
 @Client.on_message(filters.command("start") & filters.incoming & ~filters.edited)
 async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
-                await message.reply_text"kya huaa be baar baar start kyun kar rha hai"
+                await message.reply_text(
+                      text="kya huaa be baar baar start kyun kar rha hai",
+                )
                 await asyncio.sleep(2) # 😢 https://github.com/God-of-Thunderr/DFF-File-Bot/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
         if not await db.get_chat(message.chat.id):
             total=await client.get_chat_members_count(message.chat.id)
