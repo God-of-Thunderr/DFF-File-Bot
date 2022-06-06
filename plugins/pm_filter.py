@@ -691,7 +691,7 @@ async def auto_filter(client, msg, spoll=False):
     btn.insert(0, [
         InlineKeyboardButton("⭕️ Join Our Channel ⭕️", url=invite_link.invite_link
     )]     
- try:
+ 
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
     if imdb:
