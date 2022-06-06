@@ -1,5 +1,5 @@
 import os
-from .plugins.FileBot import tginfo
+from .plugins.filebot. import tginfo
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
