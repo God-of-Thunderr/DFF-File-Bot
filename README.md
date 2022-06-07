@@ -1,10 +1,4 @@
-<p align="center">
-  <img src="assets/logo.jpg" alt="Eva Maria Logo">
-</p>
-<h1 align="center">
-  <b>Eva Maria Bot</b>
-</h1>
-
+#.            DFF File Bot
 
 [![Stars](https://img.shields.io/github/stars/EvamariaTG/EvaMaria?style=flat-square&color=yellow)](https://github.com/EvamariaTG/EvaMaria/stargazers)
 [![Forks](https://img.shields.io/github/forks/EvamariaTG/EvaMaria?style=flat-square&color=orange)](https://github.com/EvamariaTG/EvaMaria/fork)
@@ -30,6 +24,7 @@
 - [x] Stats, Users, Chats, Ban, Unban, Leave, Disable, Channel
 - [x] Spelling Check Feature
 - [x] File Store
+- [×] made by .......
 ## Variables
 
 Read [this](https://telegram.dog/TeamEvamaria/12) before you start messing up with your edits.
