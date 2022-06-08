@@ -673,7 +673,7 @@ async def auto_filter(client, msg, spoll=False):
             [InlineKeyboardButton(text="🗓 1/1", callback_data="pages")]
         )
     
-    btn.insert(0, 
+    btn.insert(0,  
         InlineKeyboardButton("➕ 𝖩𝗈𝗂𝗇 𝖯𝗋𝗂𝗏𝖺𝗍𝖾 𝖢𝗁𝖺𝗇𝗇𝖾𝗅➕", url=f"{PRIVATE_CHANNEL}")
     )
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
